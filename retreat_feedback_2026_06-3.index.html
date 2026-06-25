@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marinade Feedback — Retreat 2026/06</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f0f7f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:1.5rem}
+.survey{max-width:680px;margin:0 auto;padding:0 0 2rem}
+.hero{background:#1e4a4a;border-radius:12px;padding:2rem 2rem 1.75rem;margin-bottom:1.5rem;text-align:center}
+.hero-date{display:inline-block;background:rgba(255,255,255,0.15);color:#fff;font-size:13px;font-weight:500;padding:5px 16px;border-radius:20px;letter-spacing:.5px;margin-bottom:1rem}
+.hero h1{color:#fff;font-size:24px;font-weight:500;margin-bottom:.5rem}
+.hero p{color:rgba(255,255,255,0.75);font-size:15px}
+.card{background:#fff;border:0.5px solid #b8d8d0;border-radius:12px;padding:1.5rem;margin-bottom:1rem}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.section-icon{width:36px;height:36px;border-radius:8px;background:#daeee9;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.section-title{font-size:18px;font-weight:500;color:#1e4a4a}
+.section-sub{font-size:13px;color:#3a7a6e;margin-bottom:1.25rem}
+.q-label{font-size:15px;font-weight:500;color:#1e4a4a;margin:1.25rem 0 .5rem;text-align:center}
+.q-label:first-of-type{margin-top:0}
+.q-label.left{text-align:left}
+.optional{font-size:13px;font-weight:400;color:#3a7a6e}
+.stars{display:flex;gap:6px;margin-bottom:.5rem;justify-content:center}
+.stars span{font-size:32px;cursor:pointer;color:#b8d8d0;transition:color .15s;user-select:none;line-height:1}
+.stars span.active,.stars span.hover{color:#1e8a6e}
+.star-labels{display:flex;justify-content:space-between;font-size:12px;color:#3a7a6e;margin-bottom:.25rem;max-width:200px;margin-left:auto;margin-right:auto}
+.emoji-choice{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:.5rem;justify-content:center}
+.emoji-btn{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;padding:8px 16px;border:0.5px solid #b8d8d0;border-radius:8px;background:#fff;transition:all .15s;min-width:80px}
+.emoji-btn:hover{background:#f0f7f5;border-color:#3a7a6e}
+.emoji-btn.selected{background:#daeee9;border-color:#1e4a4a}
+.emoji-btn .em{font-size:24px}
+.emoji-btn .em-label{font-size:12px;color:#3a7a6e;text-align:center}
+.checkbox-list{display:flex;flex-direction:column;gap:6px}
+.checkbox-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border:0.5px solid #b8d8d0;border-radius:8px;cursor:pointer;transition:background .12s}
+.checkbox-item:hover{background:#f0f7f5}
+.checkbox-item input{accent-color:#1e4a4a;width:16px;height:16px;cursor:pointer;flex-shrink:0}
+.checkbox-item label{font-size:14px;color:#1e4a4a;cursor:pointer}
+textarea{width:100%;border:0.5px solid #b8d8d0;border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit;color:#1e4a4a;background:#f0f7f5;resize:vertical;min-height:80px;outline:none;transition:border-color .15s}
+textarea::placeholder{color:#7ab5aa}
+textarea:focus{border-color:#1e4a4a}
+.divider{border:none;border-top:0.5px solid #b8d8d0;margin:1.25rem 0}
+.sub-block-title{font-size:15px;font-weight:500;color:#1e4a4a;margin-bottom:.25rem}
+.sub-block-sub{font-size:13px;color:#3a7a6e;margin-bottom:1rem}
+.submit-btn{width:100%;padding:14px;background:#1e4a4a;color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:500;cursor:pointer;transition:opacity .15s;margin-top:.5rem}
+.submit-btn:hover{opacity:.85}
+.success{display:none;text-align:center;padding:2rem;background:#fff;border:0.5px solid #b8d8d0;border-radius:12px}
+.success h2{font-size:22px;font-weight:500;margin-bottom:.5rem;color:#1e4a4a}
+.success p{color:#3a7a6e}
+</style>
+</head>
+<body>
+<div class="survey">
+  <div class="hero">
+    <div class="hero-date">JUNE 15–18, 2026</div>
+    <h1>Marinade Feedback — Retreat 2026/06 🧴</h1>
+    <p>Share your honest thoughts and help us make it better for everyone!</p>
+  </div>
+
+  <div id="form-body">
+
+  <div class="card">
+    <div class="section-header"><div class="section-icon">🏄</div><span class="section-title">Overall experience</span></div>
+    <div class="section-sub">Big-picture vibes first</div>
+    <div class="q-label">How would you rate the retreat overall?</div>
+    <div class="stars" data-key="overall_rating"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="star-labels"><span>Not great</span><span>Amazing</span></div>
+    <div class="q-label">Was the retreat the right length?</div>
+    <div class="emoji-choice" data-key="retreat_length">
+      <div class="emoji-btn" data-v="too_short"><span class="em">⏩</span><span class="em-label">Too short</span></div>
+      <div class="emoji-btn" data-v="just_right"><span class="em">👌</span><span class="em-label">Just right</span></div>
+      <div class="emoji-btn" data-v="too_long"><span class="em">😴</span><span class="em-label">Too long</span></div>
+    </div>
+    <div class="q-label">How was the balance between structured sessions and free time?</div>
+    <div class="emoji-choice" data-key="balance">
+      <div class="emoji-btn" data-v="too_many"><span class="em">📋</span><span class="em-label">Too many sessions</span></div>
+      <div class="emoji-btn" data-v="good"><span class="em">⚖️</span><span class="em-label">Good balance</span></div>
+      <div class="emoji-btn" data-v="too_free"><span class="em">🏖️</span><span class="em-label">Too much free time</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-header"><div class="section-icon">📣</div><span class="section-title">Monday: Reflection &amp; Learning</span></div>
+    <div class="section-sub">June 16</div>
+    <div class="q-label">Opening &amp; Welcome</div>
+    <div class="stars" data-key="mon_opening"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="q-label">Q2 Rocks</div>
+    <div class="stars" data-key="mon_q2rocks"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="q-label">Product &amp; Engineering</div>
+    <div class="stars" data-key="mon_product_eng"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <hr class="divider">
+    <div class="sub-block-title">🤖 AI Knowledge Share Session</div>
+    <div class="sub-block-sub">Your experience with the session</div>
+    <div class="q-label left">How did you enjoy sharing your AI experiences with the team?</div>
+    <textarea data-key="ai_sharing" placeholder="What worked well, what felt awkward..."></textarea>
+    <div class="q-label left">What new things did you learn?</div>
+    <textarea data-key="ai_learned" placeholder="Any tools, tips, or insights that were new to you..."></textarea>
+    <div class="q-label left">What did you find most interesting, surprising, or useful?</div>
+    <textarea data-key="ai_interesting" placeholder="A use case, a tool, a workflow, a perspective that stuck with you..."></textarea>
+    <hr class="divider">
+    <div class="q-label left">Comments on Monday <span class="optional">(optional)</span></div>
+    <textarea data-key="monday_comments" placeholder="Anything that stood out, good or bad..."></textarea>
+    <hr class="divider">
+    <div class="sub-block-title">🚀 Hackathon: "Marinate &amp; Launch"</div>
+    <div class="sub-block-sub">Mon kickoff → Wed demos</div>
+    <div class="q-label">How would you rate the hackathon overall?</div>
+    <div class="stars" data-key="hackathon_rating"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="q-label">Did you participate in the hackathon?</div>
+    <div class="emoji-choice" data-key="hackathon_participated">
+      <div class="emoji-btn" data-v="yes"><span class="em">💻</span><span class="em-label">Yes</span></div>
+      <div class="emoji-btn" data-v="no"><span class="em">👀</span><span class="em-label">No, just watched demos</span></div>
+    </div>
+    <div class="q-label">Was there enough time allocated for hackathon work?</div>
+    <div class="emoji-choice" data-key="hackathon_time">
+      <div class="emoji-btn" data-v="not_enough"><span class="em">⏰</span><span class="em-label">Not enough</span></div>
+      <div class="emoji-btn" data-v="just_right"><span class="em">👌</span><span class="em-label">Just right</span></div>
+      <div class="emoji-btn" data-v="too_much"><span class="em">😴</span><span class="em-label">Too much</span></div>
+    </div>
+    <div class="q-label">How were the hackathon demo presentations on Wednesday?</div>
+    <div class="stars" data-key="hackathon_demos"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="q-label left">What would make the hackathon better next time?</div>
+    <textarea data-key="hackathon_improve" placeholder="Team formation, time allocation, challenge scope, judging criteria..."></textarea>
+  </div>
+
+  <div class="card">
+    <div class="section-header"><div class="section-icon">🪞</div><span class="section-title">Wednesday: Reflection</span></div>
+    <div class="section-sub">June 18</div>
+    <div class="q-label">Q3 Brainstorm</div>
+    <div class="stars" data-key="wed_q3brainstorm"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="q-label">Team activity — Padel</div>
+    <div class="stars" data-key="wed_padel"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="q-label">Closing dinner</div>
+    <div class="stars" data-key="wed_dinner"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="q-label left">Comments on Wednesday <span class="optional">(optional)</span></div>
+    <textarea data-key="wednesday_comments" placeholder="Any thoughts on Wednesday's sessions..."></textarea>
+  </div>
+
+  <div class="card">
+    <div class="section-header"><div class="section-icon">🗺️</div><span class="section-title">Thursday: Full Day Trip</span></div>
+    <div class="section-sub">June 19</div>
+    <div class="q-label">Did you join the trip?</div>
+    <div class="emoji-choice" data-key="thu_attended">
+      <div class="emoji-btn" data-v="yes"><span class="em">✅</span><span class="em-label">Yes</span></div>
+      <div class="emoji-btn" data-v="no"><span class="em">❌</span><span class="em-label">No</span></div>
+    </div>
+    <div class="q-label">Do you enjoy team activities of this type?</div>
+    <div class="emoji-choice" data-key="thu_enjoyed_type">
+      <div class="emoji-btn" data-v="yes"><span class="em">🙌</span><span class="em-label">Yes</span></div>
+      <div class="emoji-btn" data-v="no"><span class="em">😐</span><span class="em-label">Not really</span></div>
+    </div>
+    <div class="q-label left">Comments on Thursday <span class="optional">(optional)</span></div>
+    <textarea data-key="thursday_comments" placeholder="What did you take away? What could be improved?"></textarea>
+  </div>
+
+  <div class="card">
+    <div class="section-header"><div class="section-icon">🎯</div><span class="section-title">Team activities</span></div>
+    <div class="section-sub">Help us plan better next time</div>
+    <div class="q-label left">What kind of team activities would you prefer? <span class="optional">(select all that apply)</span></div>
+    <div class="checkbox-list" data-key="activity_prefs">
+      <label class="checkbox-item"><input type="checkbox" value="sports"><label>Sports / physical (bowling, hiking, escape room...)</label></label>
+      <label class="checkbox-item"><input type="checkbox" value="food"><label>Food &amp; drinks (dinner out, cooking, wine tasting...)</label></label>
+      <label class="checkbox-item"><input type="checkbox" value="creative"><label>Creative (workshop, art, music...)</label></label>
+      <label class="checkbox-item"><input type="checkbox" value="chill"><label>Chill / social (board games, pub quiz, karaoke...)</label></label>
+    </div>
+    <div class="q-label left">Any specific activity ideas for next time? <span class="optional">(optional)</span></div>
+    <textarea data-key="activity_ideas" placeholder="Go wild..."></textarea>
+  </div>
+
+  <div class="card">
+    <div class="section-header"><div class="section-icon">🏢</div><span class="section-title">Logistics &amp; venue</span></div>
+    <div class="section-sub">The practical stuff</div>
+    <div class="q-label">How were the meeting rooms and spaces?</div>
+    <div class="stars" data-key="venue_rating"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="q-label">How was the catering / food throughout the week?</div>
+    <div class="stars" data-key="food_rating"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="q-label">Was communication about the schedule and logistics clear?</div>
+    <div class="stars" data-key="comms_rating"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div>
+    <div class="q-label left">Any logistics feedback? <span class="optional">(optional)</span></div>
+    <textarea data-key="logistics_comments" placeholder="Room setup, timing, food preferences, anything..."></textarea>
+  </div>
+
+  <div class="card">
+    <div class="section-header"><div class="section-icon">💡</div><span class="section-title">Final thoughts</span></div>
+    <div class="section-sub">The stuff that matters most</div>
+    <div class="q-label left">What was the single best moment of the retreat for you?</div>
+    <textarea data-key="best_moment" placeholder="That one thing you'll remember..."></textarea>
+    <div class="q-label left">What's one thing we should definitely change for the next retreat?</div>
+    <textarea data-key="change_one" placeholder="Be honest — this is how we get better!"></textarea>
+    <div class="q-label left">Any topics or sessions you'd like to see at the next retreat?</div>
+    <textarea data-key="next_topics" placeholder="Workshops, discussions, activities..."></textarea>
+    <div class="q-label left">Anything else on your mind? <span class="optional">(optional)</span></div>
+    <textarea data-key="anything_else" placeholder="Shoutouts, complaints, random thoughts — all welcome 🧴"></textarea>
+  </div>
+
+  <button class="submit-btn" id="submit-btn">Submit feedback</button>
+  </div>
+
+  <div class="success" id="success-msg">
+    <div style="font-size:48px;margin-bottom:1rem">🙌</div>
+    <h2>Thank you!</h2>
+    <p>Your feedback has been saved. It really helps us make the next retreat better.</p>
+  </div>
+</div>
+
+<script>
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyZ1rq3wtEO0CY7dz_sR6y9Hct-6m-Mu7ATtBPnpMY1Zo0UisC_UXg8IdMAgnt3kWn-/exec';
+const answers = {};
+document.querySelectorAll('.stars').forEach(starsEl => {
+  const key = starsEl.dataset.key;
+  const spans = starsEl.querySelectorAll('span');
+  spans.forEach(s => {
+    s.addEventListener('mouseenter', () => { const v=+s.dataset.v; spans.forEach(x=>x.classList.toggle('hover',+x.dataset.v<=v)); });
+    s.addEventListener('mouseleave', () => { spans.forEach(x=>x.classList.remove('hover')); const cur=answers[key]||0; spans.forEach(x=>x.classList.toggle('active',+x.dataset.v<=cur)); });
+    s.addEventListener('click', () => { answers[key]=+s.dataset.v; spans.forEach(x=>x.classList.toggle('active',+x.dataset.v<=answers[key])); });
+  });
+});
+document.querySelectorAll('.emoji-choice').forEach(group => {
+  const key = group.dataset.key;
+  group.querySelectorAll('.emoji-btn').forEach(btn => {
+    btn.addEventListener('click', () => { group.querySelectorAll('.emoji-btn').forEach(b=>b.classList.remove('selected')); btn.classList.add('selected'); answers[key]=btn.dataset.v; });
+  });
+});
+document.querySelectorAll('textarea').forEach(ta => { ta.addEventListener('input', () => { answers[ta.dataset.key]=ta.value; }); });
+document.querySelectorAll('.checkbox-list').forEach(list => {
+  const key = list.dataset.key;
+  list.querySelectorAll('input[type=checkbox]').forEach(cb => { cb.addEventListener('change', () => { answers[key]=[...list.querySelectorAll('input:checked')].map(x=>x.value).join(', '); }); });
+});
+document.getElementById('submit-btn').addEventListener('click', async () => {
+  const btn = document.getElementById('submit-btn');
+  btn.textContent = 'Saving...'; btn.disabled = true;
+  try {
+    await fetch(SHEET_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({answers, timestamp: new Date().toISOString()})
+    });
+  } catch(e) { console.error(e); }
+  document.getElementById('form-body').style.display = 'none';
+  document.getElementById('success-msg').style.display = 'block';
+});
+</script>
+</body>
+</html>
